@@ -26,7 +26,7 @@ function App() {
       
       {/* Navigation */}
       <header className="header">
-        <div className="logo text-gradient">HM.</div>
+        <div className="logo text-gradient">HM</div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
           <nav className="nav-links">
             <a href="#about" className="nav-link">About</a>
