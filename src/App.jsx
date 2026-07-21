@@ -182,7 +182,7 @@ function App() {
         {/* Skills Section */}
         <section id="skills" className="section">
           <h2 className="section-title">
-            Technical <span className="text-gradient">Arsenal</span>
+            Technical <span className="text-gradient">Skills</span>
           </h2>
           
           <div className="grid-2">
