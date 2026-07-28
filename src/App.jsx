@@ -51,10 +51,13 @@ function App() {
         <section id="about" className="section hero">
           <div className="hero-inner">
             <div className="hero-content">
-              <h2 className="hero-subtitle">.NET Full Stack Consultant</h2>
               <h1 className="hero-title">
                 Hi, I'm <span className="text-gradient">Hariharan M</span>
               </h1>
+              <h2 className="hero-subtitle" style={{ textTransform: 'none', letterSpacing: '0.5px', fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '1.5rem' }}>
+                <span style={{ color: 'var(--text-primary)', fontSize: '1.3rem', display: 'block', marginBottom: '0.5rem' }}>AI-Enabled .NET Full Stack Developer</span>
+                <span style={{ color: 'var(--text-secondary)', fontWeight: '400' }}>ASP.NET Core/MVC, React, Azure, SQL <span style={{ margin: '0 0.5rem', color: 'var(--accent-primary)' }}>|</span> Git, TFS, DevOps, ServiceNow <span style={{ margin: '0 0.5rem', color: 'var(--accent-primary)' }}>|</span> <span style={{ color: 'var(--text-primary)', fontWeight: '500' }}>3+ Yrs Experience</span></span>
+              </h2>
               <p className="hero-desc">
                 .NET Full Stack Consultant — Application Support Specialist (L2/L3) & UI Developer with 3+ years building and maintaining enterprise-grade solutions in Microsoft technologies across Insurance, Logistics & Manufacturing. I turn complex production challenges into fast, reliable systems — from React interfaces to .NET Core APIs — and I'm currently looking for a Full Stack/Frontend role where I can own features end-to-end.
               </p>
