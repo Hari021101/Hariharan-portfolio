@@ -313,7 +313,7 @@ function App() {
                   <span className="skill-tag">Copilot</span>
                   <span className="skill-tag">ChatGPT</span>
                   <span className="skill-tag">Cursor AI</span>
-                  <span className="skill-tag">Anti-gravity</span>
+                  <span className="skill-tag">Antigravity</span>
                 </div>
               </div>
             </div>
