@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "update-resume": "powershell -ExecutionPolicy Bypass -File update-resume.ps1"
   },
   "dependencies": {
     "lucide-react": "^1.25.0",
