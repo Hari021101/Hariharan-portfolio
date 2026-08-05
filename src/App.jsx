@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Mail, MapPin, Phone, ChevronRight, Code, Briefcase, ExternalLink, Download, Moon, Sun } from 'lucide-react';
+import { Mail, MapPin, Phone, ChevronRight, Code, Briefcase, ExternalLink, Download, Moon, Sun, Menu, X } from 'lucide-react';
 import profileImage from './assets/HariHaran Profile Pic.png';
 
 function App() {
   const [isDark, setIsDark] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Smooth scroll
   useEffect(() => {
@@ -43,8 +44,26 @@ function App() {
           >
             {isDark ? <Sun size={20} /> : <Moon size={20} />}
           </button>
+          <button 
+            className="mobile-menu-toggle btn btn-secondary"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            style={{ padding: '0.5rem', borderRadius: '50%', display: 'none' }}
+          >
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </div>
       </header>
+
+      {/* Mobile Menu Overlay */}
+      <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
+        <nav className="mobile-nav-links">
+          <a href="#about" className="mobile-nav-link" onClick={() => setIsMenuOpen(false)}>About</a>
+          <a href="#experience" className="mobile-nav-link" onClick={() => setIsMenuOpen(false)}>Experience</a>
+          <a href="#projects" className="mobile-nav-link" onClick={() => setIsMenuOpen(false)}>Projects</a>
+          <a href="#skills" className="mobile-nav-link" onClick={() => setIsMenuOpen(false)}>Skills</a>
+          <a href="#contact" className="mobile-nav-link" onClick={() => setIsMenuOpen(false)}>Contact</a>
+        </nav>
+      </div>
 
       <main>
         {/* Hero Section */}
@@ -376,7 +395,7 @@ function App() {
                   </div>
                   <div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>Email</div>
-                    <div style={{ fontWeight: '500' }}>mhariharan2019@gmail.com</div>
+                    <div style={{ fontWeight: '500' }}>Hari.be2023@gmail.com</div>
                   </div>
                 </a>
                 
