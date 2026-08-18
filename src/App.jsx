@@ -87,7 +87,7 @@ function App() {
                 <a href="#experience" className="btn btn-secondary">
                   View My Work
                 </a>
-                <a href="/Hariharan_M_Resume.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ borderColor: 'var(--accent-primary)', color: 'var(--accent-primary)' }}>
+                <a href="./Hariharan_M_Resume.pdf" download="Hariharan_M_Resume.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ borderColor: 'var(--accent-primary)', color: 'var(--accent-primary)' }}>
                   <Download size={20} /> Resume
                 </a>
               </div>
@@ -352,7 +352,7 @@ function App() {
             <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', maxWidth: '600px', margin: '0 auto 2rem auto' }}>
               You can download my complete resume as a PDF to view my full background, additional skills, and professional summary offline.
             </p>
-            <a href="/Hariharan_M_Resume.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+            <a href="./Hariharan_M_Resume.pdf" download="Hariharan_M_Resume.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
               <Download size={20} /> Download Resume
             </a>
           </div>
