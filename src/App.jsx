@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Mail, MapPin, Phone, ChevronRight, Code, Briefcase, ExternalLink, Download, Moon, Sun, Menu, X } from 'lucide-react';
-import profileImage from './assets/HariHaran Profile Pic.png';
+import profileImage from './assets/HariHaran Profile Pic.webp';
 
 function App() {
   const [isDark, setIsDark] = useState(true);
@@ -93,7 +93,7 @@ function App() {
               </div>
             </div>
             <div className="hero-image-container">
-              <img src={profileImage} alt="Hariharan M" className="hero-image" />
+              <img src={profileImage} alt="Hariharan M" className="hero-image" fetchPriority="high" />
             </div>
           </div>
         </section>
