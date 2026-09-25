@@ -1,72 +1,86 @@
 import React from 'react';
-import { Mail, MapPin, Phone, Code, Briefcase, Globe } from 'lucide-react';
+import { Mail, MapPin, Phone, Code, Briefcase, ExternalLink } from 'lucide-react';
 
 export default function Contact() {
+  const contactLinks = [
+    {
+      label: 'Business Email',
+      value: 'Hari.be2023@gmail.com',
+      href: 'mailto:Hari.be2023@gmail.com',
+      icon: Mail,
+      isExternal: false,
+    },
+    {
+      label: 'Contact Phone',
+      value: '+91 6383594264',
+      href: 'tel:+916383594264',
+      icon: Phone,
+      isExternal: false,
+    },
+    {
+      label: 'Location',
+      value: 'India',
+      href: null,
+      icon: MapPin,
+      isExternal: false,
+    },
+    {
+      label: 'GitHub',
+      value: 'Hari021101 (Hariharan M)',
+      href: 'https://github.com/Hari021101',
+      icon: Code,
+      isExternal: true,
+    },
+    {
+      label: 'LinkedIn',
+      value: 'Hariharan M',
+      href: 'https://www.linkedin.com/in/hariharan0211/',
+      icon: Briefcase,
+      isExternal: true,
+    },
+  ];
+
   return (
-    <div>
-      <h2 className="section-title" style={{ textAlign: 'left', marginBottom: '2rem' }}>
+    <div className="contact-section-wrapper">
+      <h2 className="section-title section-title-sub">
         Let's <span className="text-gradient">Connect</span>
       </h2>
       <div className="glass-panel contact-info">
-        <a href="mailto:Hari.be2023@gmail.com" className="contact-item">
-          <div className="contact-icon">
-            <Mail size={24} />
-          </div>
-          <div>
-            <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>Business Email</div>
-            <div style={{ fontWeight: '500' }}>Hari.be2023@gmail.com</div>
-          </div>
-        </a>
-        
-        <a href="tel:+916383594264" className="contact-item">
-          <div className="contact-icon">
-            <Phone size={24} />
-          </div>
-          <div>
-            <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>Contact Phone</div>
-            <div style={{ fontWeight: '500' }}>+91 6383594264</div>
-          </div>
-        </a>
-        
-        <div className="contact-item">
-          <div className="contact-icon">
-            <MapPin size={24} />
-          </div>
-          <div>
-            <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>Location</div>
-            <div style={{ fontWeight: '500' }}>India</div>
-          </div>
-        </div>
-        
-        <a href="https://github.com/Hari021101" target="_blank" rel="noopener noreferrer" className="contact-item">
-          <div className="contact-icon">
-            <Code size={24} />
-          </div>
-          <div>
-            <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>GitHub</div>
-            <div style={{ fontWeight: '500' }}>Hari021101 (Hariharan M)</div>
-          </div>
-        </a>
-        
-        <a href="https://www.linkedin.com/in/hariharan0211/" target="_blank" rel="noopener noreferrer" className="contact-item">
-          <div className="contact-icon">
-            <Briefcase size={24} />
-          </div>
-          <div>
-            <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>LinkedIn</div>
-            <div style={{ fontWeight: '500' }}>Hariharan M</div>
-          </div>
-        </a>
+        {contactLinks.map((item, idx) => {
+          const Icon = item.icon;
+          const content = (
+            <>
+              <div className="contact-icon">
+                <Icon size={22} />
+              </div>
+              <div className="contact-details">
+                <div className="contact-label">{item.label}</div>
+                <div className="contact-val">{item.value}</div>
+              </div>
+              {item.isExternal && <ExternalLink size={16} className="contact-external-icon" />}
+            </>
+          );
 
-        <a href="https://hariharan-portfolio-liard-nine.vercel.app/" target="_blank" rel="noopener noreferrer" className="contact-item">
-          <div className="contact-icon">
-            <Globe size={24} />
-          </div>
-          <div>
-            <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>Live Portfolio</div>
-            <div style={{ fontWeight: '500' }}>hariharan-portfolio-liard-nine.vercel.app</div>
-          </div>
-        </a>
+          if (item.href) {
+            return (
+              <a 
+                key={idx}
+                href={item.href}
+                target={item.isExternal ? "_blank" : undefined}
+                rel={item.isExternal ? "noopener noreferrer" : undefined}
+                className="contact-item"
+              >
+                {content}
+              </a>
+            );
+          }
+
+          return (
+            <div key={idx} className="contact-item contact-item-static">
+              {content}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
