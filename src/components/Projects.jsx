@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Code, ExternalLink, Globe, ChevronDown, Layers, CheckCircle2 } from 'lucide-react';
+import { ExternalLink, Globe, ChevronDown, Layers, CheckCircle2 } from 'lucide-react';
 
 export default function Projects() {
   // State for toggling project details (roles, responsibilities, architecture)
@@ -25,8 +25,6 @@ export default function Projects() {
       links: [
         { label: 'Live Demo', url: 'https://office-project-beat-box-front-end.vercel.app/', icon: Globe, primary: true },
         { label: 'Swagger API', url: 'https://beatbox-api.runasp.net/swagger/index.html', icon: ExternalLink },
-        { label: 'Frontend Repo', url: 'https://github.com/Hari021101', icon: Code },
-        { label: 'Backend Repo', url: 'https://github.com/Hari021101', icon: Code },
       ],
       tags: [
         'ASP.NET Core', 'React.js', 'SQL Server', 'Entity Framework Core',
@@ -48,7 +46,6 @@ export default function Projects() {
       badge: 'Backend & Data Engine',
       summary: 'High-throughput data aggregation backend engine built with .NET 9 and Supabase PostgreSQL. Automates background synchronization pipelines across HubSpot, Stripe, and Google Calendar with fault-tolerant upsert logic.',
       links: [
-        { label: 'GitHub Repo', url: 'https://github.com/Hari021101/RevenueMetrics', icon: Code },
         { label: 'Live API Docs', url: 'https://revenuemetrics.onrender.com', icon: ExternalLink, primary: true },
       ],
       tags: [
